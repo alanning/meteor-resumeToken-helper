@@ -1,0 +1,5 @@
+#!/bin/sh
+
+export MONGO_URL=mongodb://127.0.0.1:3002/meteor
+
+meteor run --port 3004

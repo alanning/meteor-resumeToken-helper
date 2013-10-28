@@ -1,0 +1,37 @@
+<head>
+  <title>resumeTokens</title>
+</head>
+
+<body>
+  {{> emailsForm}}
+  {{> tokens}}
+</body>
+
+<template name="emailsForm">
+  <h1>Generate resume tokens</h1>
+
+  <div>
+    <label for="password">Password:</label>
+    <input type="text" id="password" name="password" value="crystal">
+  </div>
+  <div>
+    <label for="emails">User email addresses:</label>
+    <textarea id="emails" name="emails"></textarea>
+  </div>
+  <button id="submit">Generate tokens</button>
+</template>
+
+<template name="tokens">
+  <br />
+  {{#if resumeTokens}}
+  <div id="tokenWrapper">
+    <h3>Resume Tokens</h3>
+    <textarea>{{{resumeTokens}}}</textarea>
+    <ol>
+      {{#each tokenList}}
+      <li>{{.}}</li>
+      {{/each}}
+    </ol>
+  </div>
+  {{/if}}
+</template>

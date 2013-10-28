@@ -1,0 +1,14 @@
+/* CSS declarations go here */
+label {
+  display:block;
+  padding-top:1em;
+}
+textarea {
+  width:30em;
+  height:10em;
+  overflow:auto;
+  margin-bottom:1em;
+}
+button {
+  font-size:1.6em;
+}
